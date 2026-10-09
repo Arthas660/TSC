@@ -1,8 +1,6 @@
 function throwSeasonError(message: string): never {
     throw new Error(message);
 }
-type FirstMonthOfSeason = 3 | 6 | 9 | 12;
-
 function getSeasonByFirstMonth(month: number): string {
     if (month < 1 || month > 12 || !Number.isInteger(month)) {
         throwSeasonError(`Некоректний номер місяця: ${month}. Місяць має бути цілим числом від 1 до 12.`);
